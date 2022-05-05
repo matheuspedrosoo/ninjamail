@@ -21,12 +21,11 @@ module.exports = {
   plugins: ["react", "@typescript-eslint"],
   rules: {
     quotes: [2, "double", { avoidEscape: true }],
-
     "quote-props": [2, "as-needed"],
     "object-curly-spacing": [2, "always"],
     "react/react-in-jsx-scope": "off",
     "require-jsdoc": 0,
-    "spaced-comment": [2, "never"],
+    "spaced-comment": [2, "always", { exceptions: ["-", "+"] }],
   },
   settings: {
     react: {
