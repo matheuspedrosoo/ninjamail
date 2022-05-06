@@ -25,7 +25,7 @@ module.exports = {
     "object-curly-spacing": [2, "always"],
     "react/react-in-jsx-scope": "off",
     "require-jsdoc": 0,
-    "spaced-comment": [2, "always", { exceptions: ["-", "+"] }],
+    "spaced-comment": "off",
   },
   settings: {
     react: {
