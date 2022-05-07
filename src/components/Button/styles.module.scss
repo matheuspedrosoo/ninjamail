@@ -22,3 +22,13 @@
     height: 25px;
   }
 }
+@media screen and (max-width: 320px) {
+  .container {
+    margin: 0 auto;
+  }
+
+  .styleButton {
+    min-width: 65px;
+    height: 21px;
+  }
+}

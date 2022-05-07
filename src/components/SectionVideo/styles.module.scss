@@ -1,0 +1,126 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin style_font_h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 80px;
+  color: #ffffff;
+}
+
+@mixin style_button {
+  width: 200px;
+  height: 65px;
+  background: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 1.05px;
+  color: #4ba87d;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  height: 744px;
+  margin: 70px auto;
+  background: #f7f7f7;
+  background-image: url("/sectionVideo/img_background.png");
+  background-repeat: no-repeat;
+  background-position: 0px -170px;
+  @include center;
+}
+
+.content {
+  max-width: 944px;
+  width: 100%;
+  height: 531px;
+  background-image: url("/sectionVideo/img_video.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include center;
+  flex-direction: column;
+  gap: 80px;
+
+  h1 {
+    @include style_font_h1;
+  }
+
+  .button {
+    @include style_button;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    height: 487px;
+    background-size: 488.32px 488.32px;
+    background-position: -20px -69px;
+  }
+
+  .content {
+    max-width: 616px;
+    height: 347px;
+
+    h1 {
+      font-size: 38px;
+      line-height: 51px;
+    }
+
+    .button {
+      width: 132px;
+      height: 42px;
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .container {
+    width: 95%;
+    height: 349px;
+    background-position: center center;
+  }
+  .content {
+    gap: 40px;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    height: 237px;
+    background-size: 349.45px 349.45px;
+  }
+  .content {
+    max-width: 304px;
+    height: 171px;
+    gap: 20px;
+
+    h1 {
+      font-size: 22px;
+      line-height: 29px;
+    }
+
+    .button {
+      width: 65px;
+      height: 21px;
+      font-size: 6px;
+      line-height: 7px;
+    }
+  }
+}
