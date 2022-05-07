@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Header, CreateStunning, SectionVideo } from "../components";
+import { Header, CreateStunning, SectionVideo, Section3 } from "../components";
 
 const Home: NextPage = () => {
   return (
@@ -7,6 +7,7 @@ const Home: NextPage = () => {
       <Header />
       <CreateStunning />
       <SectionVideo />
+      <Section3 />
     </>
   );
 };

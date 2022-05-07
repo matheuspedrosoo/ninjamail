@@ -1,0 +1,105 @@
+@mixin style_font_description {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000000;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@mixin style_font_link {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4ba87d;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.container {
+  //   border: 1px solid yellow;
+  max-width: 320px;
+  max-height: 449px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  & + .container {
+    margin-top: 88px;
+  }
+
+  .card_image {
+    // border: 1px solid red;
+    width: 100%;
+    max-height: 253px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card_footer {
+    background: #ffffff;
+    width: 100%;
+    max-height: 196px;
+    padding: 24px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    p {
+      @include style_font_description;
+      //   padding: 24px 30px;
+    }
+
+    a {
+      @include style_font_link;
+      padding: 12px 0;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 209px;
+    max-height: 294px;
+
+    & + .container {
+      margin-top: 53px;
+    }
+
+    .card_image {
+      max-height: 166px;
+    }
+
+    .card_footer {
+      padding: 17px 20px;
+
+      a {
+        padding: 10px 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    & + .container {
+      margin-top: 10px;
+
+      align-self: end;
+    }
+  }
+}
