@@ -1,8 +1,13 @@
 import type { NextPage } from "next";
-import { Header } from "../components/Header";
+import { Header, CreateStunning } from "../components";
 
 const Home: NextPage = () => {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <CreateStunning />
+    </>
+  );
 };
 
 export default Home;
