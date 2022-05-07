@@ -1,5 +1,6 @@
 .styleButton {
   min-width: 168px;
+  max-width: 221px;
   height: 41px;
   background: #4ba87d;
   color: #fff;
@@ -8,6 +9,7 @@
   align-items: center;
   justify-content: center;
   transition: filter 0.4s;
+  text-transform: uppercase;
 
   &:hover {
     filter: brightness(0.9);
