@@ -1,5 +1,11 @@
 import type { NextPage } from "next";
-import { Header, CreateStunning, SectionVideo, Section3 } from "../components";
+import {
+  Header,
+  CreateStunning,
+  SectionVideo,
+  Section3,
+  Section4,
+} from "../components";
 
 const Home: NextPage = () => {
   return (
@@ -8,6 +14,7 @@ const Home: NextPage = () => {
       <CreateStunning />
       <SectionVideo />
       <Section3 />
+      <Section4 />
     </>
   );
 };
