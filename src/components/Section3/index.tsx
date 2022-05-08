@@ -1,4 +1,3 @@
-import { Section4 } from "../Section4";
 import { Card } from "./Card";
 import { DataCard } from "./DataCard";
 import styles from "./styles.module.scss";
