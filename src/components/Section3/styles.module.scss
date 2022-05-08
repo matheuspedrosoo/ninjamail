@@ -149,8 +149,8 @@
     }
     .icon4 {
       width: 40px;
-      left: 14%;
-      bottom: 14%;
+      left: 13%;
+      bottom: 21%;
     }
     .icon5 {
       right: 2%;
@@ -195,11 +195,12 @@
       content: "";
       width: 100%;
       position: absolute;
-      height: 865px;
+      height: 100%;
       background-image: url("/section3/imgBackgroundMobile.png");
       background-repeat: no-repeat;
       background-size: cover;
       margin-top: 126px;
+      background-position: 100% 100%;
     }
 
     .imgBackground {

@@ -1,0 +1,91 @@
+@mixin style_font_h1 {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 40px;
+  color: #ffffff;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+@mixin style_font_description {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 22px;
+  color: #ffffff;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.container {
+  width: 342px;
+  height: 239px;
+  position: relative;
+  background-size: cover;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(
+      0deg,
+      #000000 -32.5%,
+      rgba(84, 84, 84, 0.0001) 67.78%
+    );
+  }
+
+  .card_text {
+    position: relative;
+    z-index: 1;
+    padding: 20px 27px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    h1 {
+      @include style_font_h1;
+    }
+
+    p {
+      @include style_font_description;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 223px;
+    height: 157px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    height: 237px;
+  }
+
+  .card_text {
+    padding: 15px 27px;
+    row-gap: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 223px;
+    height: 157px;
+  }
+}

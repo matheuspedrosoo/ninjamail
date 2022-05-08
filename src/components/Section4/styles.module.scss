@@ -1,0 +1,177 @@
+@mixin style_font_h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 48px;
+  text-align: center;
+  color: #000000;
+
+  @media screen and(max-width: 1024px) {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+@mixin style_span {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  letter-spacing: 1.05px;
+  color: #4ba87d;
+
+  @media screen and(max-width: 1024px) {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+@mixin style_input {
+  @include style_span;
+  color: #000;
+
+  @media screen and(max-width: 1024px) {
+    width: 275px;
+    height: 42px;
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  @media screen and(max-width: 600px) {
+    width: 223px;
+    height: 42px;
+  }
+}
+
+@mixin style_button {
+  @include style_span;
+  color: #ffffff;
+  font-weight: 900;
+
+  @media screen and(max-width: 1024px) {
+    width: 144px;
+    height: 42px;
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+.container {
+  max-width: 1089px;
+  width: 100%;
+  //   min-height: 530px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: -46rem;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerFooter {
+  h1 {
+    @include style_font_h1;
+    padding: 30px 140px;
+  }
+
+  > div {
+    max-width: 668px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 27px;
+    margin: 0 auto;
+
+    input {
+      width: 420px;
+      height: 65px;
+      background: #ffffff;
+      border: 1px solid #9f9f9f;
+      border-radius: 5px;
+      padding: 0 25px;
+      @include style_input;
+    }
+
+    .button {
+      width: 221px;
+      height: 65px;
+      background: #4ba87d;
+      @include style_button;
+    }
+  }
+
+  span {
+    @include style_span;
+    padding: 20px 235px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 708px;
+    height: 345px;
+    margin-top: -29rem;
+  }
+
+  .containerFooter {
+    h1 {
+      padding: 20px 111px;
+    }
+
+    span {
+      padding: 10px 131px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 95%;
+    height: 843px;
+    margin-top: 0;
+  }
+
+  .cardsContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 21px;
+    position: relative;
+    z-index: 2;
+    margin-top: -63px;
+  }
+
+  .containerFooter {
+    padding: 0;
+
+    h1 {
+      padding: 50px 10px 10px;
+    }
+
+    > div {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    span {
+      padding: 0;
+      text-align: center;
+      margin-top: -64px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .cardsContainer {
+    margin-top: 0;
+  }
+
+  .containerFooter {
+    padding: 20px 30px 10px;
+  }
+}
