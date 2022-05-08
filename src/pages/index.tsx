@@ -5,6 +5,7 @@ import {
   SectionVideo,
   Section3,
   Section4,
+  Section5,
 } from "../components";
 
 const Home: NextPage = () => {
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <SectionVideo />
       <Section3 />
       <Section4 />
+      <Section5 />
     </>
   );
 };
