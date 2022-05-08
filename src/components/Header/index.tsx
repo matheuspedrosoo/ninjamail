@@ -25,7 +25,11 @@ export function Header() {
               <a href="#">Partners</a>
             </li>
             <li>
-              <Button href="#" title="SIGN UP FREE" />
+              <Button
+                href="#"
+                title="SIGN UP FREE"
+                classNameStyle={styles.button}
+              />
             </li>
           </ul>
         </div>

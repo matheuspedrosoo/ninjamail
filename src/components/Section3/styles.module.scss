@@ -1,0 +1,264 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin style_font_h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 48px;
+  color: #000000;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 28px;
+    line-height: 31px;
+  }
+}
+
+@mixin style_font_description {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 26px;
+  color: #000000;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  min-height: 1060px;
+  margin: 0 auto;
+  background-image: url("/section3/img.png");
+  background-repeat: no-repeat;
+  position: relative;
+  top: -361px;
+  @include center;
+
+  .icon1,
+  .icon2,
+  .icon3,
+  .icon4,
+  .icon5,
+  .icon6,
+  .icon7,
+  .icon8,
+  .icon9,
+  .icon22,
+  .imgBackground {
+    position: absolute;
+  }
+
+  .icon22 {
+    display: none;
+  }
+
+  .icon1 {
+    left: 41px;
+    top: 334px;
+  }
+
+  .icon2 {
+    left: 88px;
+    top: 663px;
+  }
+  .icon3 {
+    left: 78px;
+    bottom: 122px;
+  }
+  .icon4 {
+    left: 293px;
+    bottom: 216px;
+  }
+  .icon5 {
+    right: 46px;
+    bottom: 325px;
+  }
+  .icon6 {
+    right: 132px;
+    bottom: 355px;
+  }
+  .icon7 {
+    right: 1px;
+    bottom: 479px;
+  }
+  .icon8 {
+    right: 101px;
+    top: 325px;
+  }
+  .icon9 {
+    right: 61px;
+    top: 165px;
+  }
+  .imgBackground {
+    top: 383px;
+    left: 639px;
+  }
+}
+
+.content {
+  max-width: 1098px;
+  width: 100%;
+  height: 533px;
+  display: flex;
+  gap: 47px;
+
+  .contentText {
+    max-width: 365px;
+    max-height: 324px;
+    height: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h1 {
+      @include style_font_h1;
+    }
+    p {
+      @include style_font_description;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    min-height: 692.19px;
+    top: -245px;
+    background-size: cover;
+
+    .icon1,
+    .icon3,
+    .icon7,
+    .icon8,
+    .icon6 {
+      display: none;
+    }
+
+    .icon2 {
+      width: 28px;
+      top: 50%;
+      left: 97.1%;
+    }
+    .icon4 {
+      width: 40px;
+      left: 14%;
+      bottom: 14%;
+    }
+    .icon5 {
+      right: 2%;
+      bottom: 23%;
+      width: 20px;
+    }
+    .icon9 {
+      width: 10px;
+      right: 3%;
+      top: 30%;
+    }
+    .imgBackground {
+      width: 757px;
+      height: 757px;
+      top: 30%;
+      right: -33%;
+      left: unset;
+    }
+  }
+
+  .content {
+    width: 710px;
+    height: 348px;
+    justify-content: space-between;
+    gap: unset;
+
+    .contentText {
+      max-width: 232px;
+      max-height: 206px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    top: -71px;
+    height: 900px;
+    background-image: none;
+    align-items: flex-start;
+
+    &:after {
+      content: "";
+      width: 100%;
+      position: absolute;
+      height: 865px;
+      background-image: url("/section3/imgBackgroundMobile.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 126px;
+    }
+
+    .imgBackground {
+      z-index: 2;
+      left: -196px;
+      top: 65%;
+      transform: rotate(11deg);
+    }
+
+    .icon1 {
+      display: block;
+      left: 20px;
+      top: 520px;
+      z-index: 1;
+    }
+    .icon2 {
+      left: -10px;
+      top: 426px;
+      z-index: 1;
+    }
+    .icon4 {
+      z-index: 1;
+      top: 341px;
+      left: 75px;
+    }
+
+    .icon5 {
+      z-index: 1;
+      bottom: 109px;
+      right: 37px;
+    }
+
+    .icon22 {
+      display: block;
+      z-index: 1;
+      right: 10px;
+      top: 578px;
+    }
+  }
+
+  .content {
+    flex-direction: column;
+    justify-content: unset;
+    height: 100%;
+    width: 95%;
+    z-index: 2;
+
+    .contentText {
+      margin-top: 40px;
+      p {
+        padding: 0 14px 0 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    top: 2px;
+    min-height: unset;
+  }
+}
