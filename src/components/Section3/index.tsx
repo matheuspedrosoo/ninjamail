@@ -31,6 +31,7 @@ export function Section3() {
 
         <img className={styles.icon1} src="/section3/icon1.svg" alt="" />
         <img className={styles.icon2} src="/section3/icon2.svg" alt="" />
+        <img className={styles.icon22} src="/section3/icon2.svg" alt="" />
         <img className={styles.icon3} src="/section3/icon3.svg" alt="" />
         <img className={styles.icon4} src="/section3/icon4.svg" alt="" />
         <img className={styles.icon5} src="/section3/icon5.svg" alt="" />

@@ -51,8 +51,13 @@
   .icon7,
   .icon8,
   .icon9,
+  .icon22,
   .imgBackground {
     position: absolute;
+  }
+
+  .icon22 {
+    display: none;
   }
 
   .icon1 {
@@ -81,7 +86,7 @@
     bottom: 355px;
   }
   .icon7 {
-    right: 8px;
+    right: 1px;
     bottom: 479px;
   }
   .icon8 {
@@ -203,6 +208,36 @@
       top: 65%;
       transform: rotate(11deg);
     }
+
+    .icon1 {
+      display: block;
+      left: 20px;
+      top: 520px;
+      z-index: 1;
+    }
+    .icon2 {
+      left: -10px;
+      top: 426px;
+      z-index: 1;
+    }
+    .icon4 {
+      z-index: 1;
+      top: 341px;
+      left: 75px;
+    }
+
+    .icon5 {
+      z-index: 1;
+      bottom: 109px;
+      right: 37px;
+    }
+
+    .icon22 {
+      display: block;
+      z-index: 1;
+      right: 10px;
+      top: 578px;
+    }
   }
 
   .content {
@@ -210,10 +245,13 @@
     justify-content: unset;
     height: 100%;
     width: 95%;
-    z-index: 1;
+    z-index: 2;
 
     .contentText {
       margin-top: 40px;
+      p {
+        padding: 0 14px 0 0;
+      }
     }
   }
 }
