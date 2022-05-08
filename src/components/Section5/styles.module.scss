@@ -44,20 +44,35 @@
 
 @media (max-width: 1024px) {
   .container {
+    margin: 50px auto;
+
     .containerLogos {
+      margin-top: 48px;
       flex-wrap: wrap;
+
+      img {
+        width: 104px;
+        height: 30px;
+      }
     }
   }
 }
 
 @media (max-width: 600px) {
   .container {
+    padding: 0 5%;
     margin: 0;
-    margin-top: 23rem;
+    margin-top: 25rem;
 
     .containerLogos {
       margin-top: 34px;
       row-gap: 30px;
     }
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    margin-top: 7rem;
   }
 }

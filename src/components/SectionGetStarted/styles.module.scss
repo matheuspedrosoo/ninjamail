@@ -1,0 +1,75 @@
+@mixin style_font_h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 42px;
+    line-height: 56px;
+  }
+
+  @media screen and (max-width: 600px) {
+    line-height: 48px;
+  }
+}
+
+@mixin style_button {
+  width: 200px;
+  height: 65px;
+  background: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 1.05px;
+  color: #4ba87d;
+
+  @media screen and (max-width: 1024px) {
+    width: 131px;
+    height: 42px;
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  min-height: 366px;
+  background: #4ba87d;
+  margin: 12rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 40px;
+
+  h1 {
+    @include style_font_h1;
+    text-align: center;
+  }
+
+  .button {
+    @include style_button;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    min-height: 240px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    // margin: 9rem auto;
+    min-height: 290px;
+  }
+}

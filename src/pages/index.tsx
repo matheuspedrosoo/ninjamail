@@ -6,6 +6,7 @@ import {
   Section3,
   Section4,
   Section5,
+  SectionGetStarted,
 } from "../components";
 
 const Home: NextPage = () => {
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       <Section3 />
       <Section4 />
       <Section5 />
+      <SectionGetStarted />
     </>
   );
 };
