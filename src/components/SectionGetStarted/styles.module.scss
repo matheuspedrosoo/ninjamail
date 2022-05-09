@@ -44,7 +44,7 @@
   width: 100%;
   min-height: 366px;
   background: #4ba87d;
-  margin: 12rem auto;
+  margin: 12rem auto 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,12 +64,13 @@
 @media screen and (max-width: 1024px) {
   .container {
     min-height: 240px;
+    margin: 0rem auto 0 auto;
   }
 }
 
 @media screen and (max-width: 600px) {
   .container {
-    // margin: 9rem auto;
+    margin: 5rem auto 0 auto;
     min-height: 290px;
   }
 }
